@@ -14,7 +14,7 @@ from datetime import date
 #A.Ahmad: Asking for initial input information.
 print("Hello and Welcome To The GitHub Pull Request Script!")
 print()
-user_name = input("Enter The Repository Owner Username:")
+user_name = input("Enter The Repository Owner Username :")
 repo_name = input("Enter The Name of The SPECIFIC Repository :")
 receiver_email = input("Enter Email To Also Send Results :")
 
