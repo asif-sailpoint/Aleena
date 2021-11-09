@@ -35,7 +35,7 @@ Run Script
 
 ## Usage
 
-You can enter your own choices here, below is just an example in terms:
+You can enter your own choices here, below is just an example with options I utilized for testing:
 
 #GitHub Owner Username.
 
