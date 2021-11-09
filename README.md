@@ -38,15 +38,15 @@ Run Script
 
 You can enter your own choices here, below is just an example in terms:
 
-#GitHub Owner:
+#GitHub Owner Username.
 
 Enter The Repository Owner Username :Geerlingguy
 
-#Repository Name:
+#Specific Repository Name.
 
 Enter The Name of The SPECIFIC Repository :drupal-vm
 
-#User Email For Results:
+#User Email For Results.
 
 Enter Email To Also Send Results :Asif.Ahmad@gmail.com
 
