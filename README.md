@@ -7,7 +7,7 @@ The script only pulls the information for the past week (7 days) and displays al
 
 
 ## Prerequisites
-Python 3.10.0 was used in authoring this script and is recommended to be installed to run this script locally. Please visit the following on instructions on how to setup and download Python:
+Python 3.10.0 was used in authoring this script and is recommended to be installed to run this script locally. Please visit the following page on instructions on how to setup and download Python for your machine:
 https://www.python.org/downloads/
 
 Also, it is recommended to install a few additional modules (pip install) to make sure things execute smoothly: requests, datetime, time, smtplib, ssl, MIMEMultipart
