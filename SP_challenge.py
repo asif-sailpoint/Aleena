@@ -7,13 +7,17 @@ from email.mime.text import MIMEText
 from tabulate import tabulate
 from datetime import date
 
+#A.Ahmad: Asking for initial input information.
+print("Hello and Welcome To The GitHub Pull Request Script!")
+print()
+user_name = input("Enter The Repository Owner Username:")
+repo_name = input("Enter The Name of The SPECIFIC Repository :")
+receiver_email = input("Enter Email To Also Send Results :")
+
 #A.Ahmad: Declaring variables to be used.
 today = date.today()
-user_name = input("Enter the Repository Owner :")
-repo_name = input("Enter the Name of the SPECIFIC Repository :")
 sender_email = "asifsailpoint7@gmail.com"
-receiver_email = input("Enter Email To Send Results :")
-port = 465  #A.Ahmad: For Gmail SSL.
+port = 465  #A.Ahmad: Port For Gmail SSL.
 smtp_server = "smtp.gmail.com"
 password = "Miller84!" #A.Ahmad: Hard coding gmail password, bad practice I know!
 url = "https://api.github.com/repos/{}/{}/pulls?state=all".format(user_name,repo_name)
@@ -38,21 +42,28 @@ for repo in pull_data:
     recent_prs.append(relevant_info)
 
 #A.Ahmad: Printing out results in table-form in the console.
-print("You have requested Pull request information for the following repo:")
+print()
+print("You have requested the Pull Request details for the following repo:")
 print (repo_url)
+print()
+print("Pull Request Results For The Last 7 Days:")
 print(tabulate(recent_prs, headers="keys", tablefmt="grid"))
 
 #A.Ahmad: Code for building email.
 text = """
 Hello, Friend
 
-Pull Request Information:
+You have requested the Pull Request details for the following repo:
 {repo_url}
+
+Pull Request Results For The Last 7 Days:
 {table}
 
-Regards,
+I hope you enjoyed using this awesome python script! Have a nice day!
 
-Asif Ahmad"""
+Regards,
+Asif Ahmad
+Email: Asif.Ahmad@hotmail.com"""
 
 html = """
 <head>
@@ -63,14 +74,18 @@ th, td {{ padding: 5px; }}
 </style>
 </head>
 <html><body><p>Hello, Friend</p>
-<p> Pull Request Information:</p>
+<p>You have requested the Pull Request details for the following repo:</p>
 {repo_url}
+
+<p>Pull Request Results For The Last 7 Days:</p>
 {table}
+<p>I hope you enjoyed using this awesome python script! Have a nice day!</p>
 <p>Regards,</p>
 <p>Asif Ahmad</p>
+<p>Email: Asif.Ahmad@hotmail.com</p>
 </body></html>
 """
-#A.Ahmad: Building The Email.
+#A.Ahmad: Building and Sending The Email.
 text = text.format(table=tabulate(recent_prs, headers="keys", tablefmt="grid"), repo_url=repo_url)
 html = html.format(table=tabulate(recent_prs, headers="keys", tablefmt="html"), repo_url=repo_url)
 
