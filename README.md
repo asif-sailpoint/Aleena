@@ -37,18 +37,18 @@ Run Script
 
 You can enter your own choices here, below is just an example with options I utilized for testing:
 
-#GitHub Owner Username.
+GitHub Owner Username:
 
 ```bash
 Enter The Repository Owner Username :Geerlingguy
 ```
-#Specific Repository Name.
+Specific Repository Name:
 
 ```bash
 Enter The Name of The SPECIFIC Repository :drupal-vm
 ```
 
-#User Email For Results.
+Your Email For Pull-Request Results:
 
 ```bash
 Enter Email To Also Send Results :Asif.Ahmad@gmail.com
