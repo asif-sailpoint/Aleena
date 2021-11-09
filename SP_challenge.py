@@ -1,3 +1,7 @@
+#Name: Asif Ahmad
+#Date: 11-8-2022
+#Summary: Gathers Pull Request details and prints output to terminal and sends email summary.
+
 import requests
 import datetime
 import time
