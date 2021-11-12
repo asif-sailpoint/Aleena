@@ -23,7 +23,7 @@ today = date.today()
 sender_email = "asifsailpoint7@gmail.com"
 port = 465  #A.Ahmad: Port For Gmail SSL.
 smtp_server = "smtp.gmail.com"
-password = "Miller84!" #A.Ahmad: Hard coding gmail password, bad practice I know!
+password = "REMOVED" #A.Ahmad: Hard coding gmail password, bad practice I know!
 url = "https://api.github.com/repos/{}/{}/pulls?state=all".format(user_name,repo_name)
 repo_url = "https://github.com/{}/{}/".format(user_name,repo_name)
 pull_data = requests.get(url).json()
